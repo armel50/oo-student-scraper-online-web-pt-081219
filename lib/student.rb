@@ -16,9 +16,9 @@ class Student
      students_array.each do |student_hash|
        student_hash.each do |key,val|
          student = Student.new(student_hash) 
-         @@all << student
+         
          student.send("#{key}=",val )
-        
+        @@all << student
        end
      end
   end
