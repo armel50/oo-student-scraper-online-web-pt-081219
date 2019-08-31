@@ -15,6 +15,7 @@ class Scraper
       end
   end
 
+
   def self.scrape_profile_page(profile_url)
     more_info = Nokogiri::HTML(open("#{profile_url}"))
     
@@ -23,7 +24,6 @@ class Scraper
       profile_quote = more_info.css("div.profile-quote").text
     
     bio = more_info.css("div.description-holder").css("p").text
-    
     
      hash = {:profile_quote => profile_quote,:bio => bio}
      
