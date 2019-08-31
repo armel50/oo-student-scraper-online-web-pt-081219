@@ -18,7 +18,7 @@ class Student
          student = Student.new(student_hash) 
          
          student.send("#{key}=",val )
-        @@all << student if !@@all.include?(student.name)
+        @@all << student 
        end
      end
   end
