@@ -7,13 +7,15 @@ class Scraper
   def self.scrape_index_page(index_url)
    array_of_students = Nokogiri::HTML(open("https://learn-co-curriculum.github.io/student-scraper-test-page/index.html")).css("div.student-card") 
 
-  array_of_students.collect do |student|
-      { :name => student.css("h4.student-name").text,
+ array = array_of_students.collect do |student|
+  # p "I am in scrape_index_page and the url profile is #{student.css("a").attribute("href").value}"
+     hash= { :name => student.css("h4.student-name").text,
         :location => student.css("p.student-location").text , 
         :profile_url => student.css("a").attribute("href").value
-        
       }
+     
   end
+  
    
   end
 
