@@ -29,7 +29,7 @@ class Student
   end
 
   def self.all
-    @@all.uniq
+    @@all.uniq{|student| student.name}
   end
 end
 
