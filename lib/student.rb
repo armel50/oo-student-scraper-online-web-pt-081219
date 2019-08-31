@@ -8,8 +8,6 @@ class Student
 
     @name = student_hash[:name] 
     @location = student_hash[:location]
-    p student_hash[:profile_url]
-    
     @@all << self
   end
 
