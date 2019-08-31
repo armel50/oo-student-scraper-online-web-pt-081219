@@ -16,7 +16,7 @@ class Scraper
      
      
     end
-    p array.first
+  
    
   end
 
